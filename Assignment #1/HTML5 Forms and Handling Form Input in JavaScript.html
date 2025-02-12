@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" type="text/css" href="forms and handling.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script src="forms and handling.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+
+<body>
+
+    <form id="tiedot-form">
+        <div class="form-field">
+            <label for="fullname">Full name</label>
+            <input type="text" id="fullname" size="60" maxlength="80" autofocus
+            placeholder="First name Last name" required>
+        </div>
+        <div class="form-field">
+            <label for="password">Password</label>
+            <input type="password" id="password" minlength="8" maxlength="20"
+            pattern="[A-Za-z0-9_,.-:;?!]+"
+            oninvalid="this.setCustomValidity('Käytä vaadittua muotoa.')"
+           oninput="this.setCustomValidity('')" required >
+        </div>
+        <div class="form-field">
+            <label for="passwordRepeat">Password repeated</label>
+            <input type="password" id="passwordRepeat" minlength="8" maxlength="20"
+            pattern="[A-Za-z0-9_,.-:;?!]+" required>
+        </div>
+                      
+        <div class="activity-buttons">
+            
+                <legend>Gender</legend>
+
+                <label for="male">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    male 
+                </label>
+
+                <label for="Female">
+                    <input type="radio" id="female" name="gender" value="female">
+                    female
+                </label>
+
+                <label for="other">
+                    <input type="radio" id="other" name="gender" value="other">
+                    other
+                </label>  
+        </div>
+
+        <div class="activity-buttons">
+            <legend>Hobbies</legend>
+
+            <label for="games">
+                <input type="checkbox" id="games" name="hobbies" value="games">
+                games
+            </label>
+            <label for="music">
+                <input type="checkbox" id="music" name="hobbies" value="music">
+                music
+            </label>
+            <label for="sports">
+                <input type="checkbox" id="sports" name="hobbies" value="sports">
+                sports
+            </label>
+            <label for="TV">
+                <input type="checkbox" id="TV" name="hobbies" value="TV">
+                TV
+            </label>
+        </div>
+        <div class="form-field">
+            <label for="datepicker">Birth Date</label>
+            <input type="date" id="datepicker" placeholder="pp.kk.vvvv" required>
+        </div>
+        <div class="form-field">
+            <label for="rangeHeight">Height</label>
+            <input type="range" id="rangeHeight" min="40" max="300" value="175">
+            <input type="number" id="numberHeight" min="40" max="300" value="175">
+        </div>
+
+        <div class="form-field">
+            <label for="color">Favorite color</label>
+            <input type="color" id="color">
+        </div>
+
+        <div class="form-field">
+            <label for="homeCountry">Home Country:</label>
+            <select id="homeCountry" aria-placeholder="Finland">
+                <option value="Finland">Finland</option>
+                <option value="Russia">Russia</option>
+                <optgroup label="Scandinavia">
+                    <option value="Denmark">Denmark</option>
+                    <option value="Norway">Norway</option>
+                    <option value="Sweden">Sweden</option>
+                </optgroup>
+                <optgroup label="Baltic">
+                    <option value="Estonia">Estonia</option>
+                    <option value="Latvia">Latvia</option>
+                    <option value="Lithuania">Lithuania</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <div class="form-field">
+            <label for="professionList">Profession:</label>
+            <input type="text" id="professionList" list="professions" size="40" required>
+                <datalist id="professions">
+                    <option value="Teacher"></option>
+                    <option value="Nurse"></option>
+                    <option value="Plumber"></option>
+                    <option value="Bureaucrat"></option>
+                </datalist>
+        </div>
+        <div class="message-field">
+            <label for="message">Message:</label>
+            <textarea id="message" rows="5" cols="60" maxlength="1000" 
+            placeholder="Type here your message. Max 1000 characters." required></textarea>
+        </div>
+        
+        <div class="submit-button">
+            <button type="submit">Submit</button>
+        </div>
+    </form>   
+    
+    <div id="result" class="result"></div>
+</body>
+</html>
