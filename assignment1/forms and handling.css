@@ -1,0 +1,65 @@
+/* Basic CSS file */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 2px;
+    padding: 4px;
+}
+
+#tiedot-form{
+    border-bottom: 1px solid #000;
+}
+.form-field{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.form-field label {
+    display: inline-block;
+    width: 200px;
+    margin-right: 1rem;
+    margin-right: 100px;
+}
+
+
+.activity-buttons {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    gap: 1rem;
+}
+
+.activity-buttons legend {
+    width: 180px;
+    margin-right: 1rem;
+    margin-right: 100px;
+}
+
+
+.message-field{
+    display: flex;
+    padding: 5px;
+}
+
+.message-field label {
+    display: inline-block;
+    width: 200px;
+    align-items: top;
+    margin-right: 1rem;
+    margin-right: 100px;
+}
+
+.submit-button {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    margin-left: 1rem;
+    margin-left: 300px;
+    padding: 5px;
+
+}
+
+.result{
+    white-space: pre-line;
+}
